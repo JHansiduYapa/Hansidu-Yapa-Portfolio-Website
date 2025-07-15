@@ -9,38 +9,39 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 14% 7%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 14% 7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 14% 7%;
 
-    --primary: 220 100% 50%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 270 95% 75%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 46%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 215 100% 50%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 270 95% 75%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 220 100% 50%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 270 95% 75%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(220 100% 50%), hsl(215 100% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 100% 50% / 0.1), hsl(215 100% 50% / 0.05));
-    --shadow-glow: 0 0 40px hsl(220 100% 50% / 0.15);
+    --gradient-primary: linear-gradient(135deg, hsl(270 95% 75%), hsl(280 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 95% 75% / 0.05), hsl(280 85% 65% / 0.02));
+    --shadow-glow: 0 0 40px hsl(270 95% 75% / 0.3);
+    --shadow-card: 0 4px 6px -1px hsl(270 95% 75% / 0.1), 0 2px 4px -1px hsl(270 95% 75% / 0.06);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -60,33 +61,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 14% 7%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 14% 9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 14% 9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 270 95% 75%;
+    --primary-foreground: 220 14% 7%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 14% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 14% 15%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 270 95% 75%;
+    --accent-foreground: 220 14% 7%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 14% 15%;
+    --input: 220 14% 15%;
+    --ring: 270 95% 75%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -104,6 +105,40 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+/* Animated network background */
+.network-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.network-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, hsl(270 95% 75% / 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 40% 20%, hsl(280 85% 65% / 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 90% 40%, hsl(270 95% 75% / 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 60% 90%, hsl(280 85% 65% / 0.3) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px, 120px 120px, 90px 90px;
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
 }
