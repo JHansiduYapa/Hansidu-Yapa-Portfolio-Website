@@ -195,7 +195,6 @@
             border: 2px solid var(--accent-color);
             color: var(--accent-color);
             padding: 15px 30px;
-            border-radius: 0;
             font-weight: 600;
             font-size: 14px;
             letter-spacing: 1px;
@@ -225,7 +224,6 @@
             width: 350px;
             height: 450px;
             background: var(--card-bg);
-            border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--border-color);
         }
@@ -274,7 +272,7 @@
             margin: 10px 0;
         }
 
-        /* Services Section */
+        /* Sections */
         .section {
             padding: 120px 0;
         }
@@ -320,7 +318,6 @@
         .skill-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 15px;
             padding: 50px 30px;
             text-align: center;
             transition: all 0.3s ease;
@@ -341,7 +338,6 @@
             justify-content: center;
             font-size: 40px;
             border: 2px solid var(--border-color);
-            border-radius: 50%;
             transition: all 0.3s ease;
         }
 
@@ -397,6 +393,120 @@
             font-weight: 500;
         }
 
+        /* Certifications Section */
+        .certifications-section {
+            background: var(--secondary-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .certification-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .cert-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            color: var(--primary-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .cert-issuer {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .cert-date {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .award-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .award-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), #E76F51);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+
+        .award-card h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .award-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .award-year {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
         /* Portfolio Section */
         .portfolio-tabs {
             display: flex;
@@ -445,7 +555,6 @@
         .portfolio-item {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 15px;
             overflow: hidden;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -496,7 +605,6 @@
             border: 1px solid rgba(244, 162, 97, 0.3);
             color: var(--accent-color);
             padding: 4px 12px;
-            border-radius: 12px;
             font-size: 12px;
             font-weight: 500;
         }
@@ -504,7 +612,7 @@
         /* Blog Section */
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 60px;
         }
@@ -512,7 +620,6 @@
         .blog-item {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 15px;
             overflow: hidden;
             transition: all 0.3s ease;
         }
@@ -531,6 +638,18 @@
             color: white;
             font-size: 1.5rem;
             font-weight: 600;
+            position: relative;
+        }
+
+        .linkedin-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #0077B5;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 500;
         }
 
         .blog-content {
@@ -567,6 +686,13 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .read-more:hover {
+            transform: translateX(5px);
         }
 
         /* Contact Section */
@@ -594,7 +720,6 @@
             height: 50px;
             background: var(--accent-color);
             color: var(--primary-bg);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -636,8 +761,14 @@
             }
 
             .skills-grid,
-            .portfolio-grid {
+            .portfolio-grid,
+            .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .certifications-grid,
+            .awards-grid {
+                grid-template-columns: 1fr;
             }
 
             .stats-grid {
@@ -678,6 +809,16 @@
             .portfolio-tabs {
                 flex-wrap: wrap;
                 gap: 20px;
+            }
+
+            .certifications-grid,
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certification-card {
+                flex-direction: column;
+                text-align: center;
             }
         }
 
@@ -828,6 +969,100 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section class="section certifications-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Certifications</div>
+                <h2 class="section-title">Professional Certifications</h2>
+                <p class="section-description">
+                    Continuous learning and validation of expertise in AI/ML and software development technologies.
+                </p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">TF</div>
+                    <div class="cert-info">
+                        <h4>TensorFlow Developer Certificate</h4>
+                        <div class="cert-issuer">Google</div>
+                        <div class="cert-date">2024</div>
+                    </div>
+                </div>
+
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">AWS</div>
+                    <div class="cert-info">
+                        <h4>AWS Machine Learning Specialty</h4>
+                        <div class="cert-issuer">Amazon Web Services</div>
+                        <div class="cert-date">2024</div>
+                    </div>
+                </div>
+
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">PT</div>
+                    <div class="cert-info">
+                        <h4>PyTorch Professional Certificate</h4>
+                        <div class="cert-issuer">Meta</div>
+                        <div class="cert-date">2024</div>
+                    </div>
+                </div>
+
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">HF</div>
+                    <div class="cert-info">
+                        <h4>Hugging Face NLP Course</h4>
+                        <div class="cert-issuer">Hugging Face</div>
+                        <div class="cert-date">2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Recognition</div>
+                <h2 class="section-title">Awards & Achievements</h2>
+                <p class="section-description">
+                    Recognition for excellence in AI/ML projects and academic achievements.
+                </p>
+            </div>
+
+            <div class="awards-grid">
+                <div class="award-card fade-in">
+                    <div class="award-icon">🏆</div>
+                    <h4>Best AI Innovation Award</h4>
+                    <p class="award-description">Recognized for outstanding innovation in multi-agent healthcare systems at University Tech Fest 2025.</p>
+                    <div class="award-year">2025</div>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">🥇</div>
+                    <h4>Dean's List Excellence</h4>
+                    <p class="award-description">Achieved Dean's List recognition for academic excellence in Computer Engineering studies.</p>
+                    <div class="award-year">2024</div>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">⭐</div>
+                    <h4>Outstanding Project Award</h4>
+                    <p class="award-description">Received recognition for exceptional performance in Deep Learning project implementation.</p>
+                    <div class="award-year">2024</div>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">🎯</div>
+                    <h4>Research Excellence Award</h4>
+                    <p class="award-description">Honored for contribution to AI/ML research and innovative approach to problem-solving.</p>
+                    <div class="award-year">2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="section">
         <div class="container">
@@ -929,63 +1164,66 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
+    <!-- Latest Posts Section -->
     <section id="blog" class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <div class="section-label">Latest News</div>
-                <h2 class="section-title">My Latest Articles</h2>
+                <div class="section-label">Latest Posts</div>
+                <h2 class="section-title">My Latest Posts</h2>
                 <p class="section-description">
-                    Insights and learnings from my journey in AI/ML engineering and software development.
+                    Insights and learnings from my journey in AI/ML engineering and software development, shared on LinkedIn.
                 </p>
             </div>
 
             <div class="blog-grid">
                 <article class="blog-item fade-in">
-                    <div class="blog-image">AI Trends 2025</div>
+                    <div class="blog-image">
+                        AI Trends 2025
+                        <div class="linkedin-badge">LinkedIn</div>
+                    </div>
                     <div class="blog-content">
                         <div class="blog-date">Jan 15, 2025</div>
                         <h3 class="blog-title">The Future of Generative AI in 2025</h3>
                         <p class="blog-excerpt">
                             Exploring the latest trends and developments in generative AI technology and its impact on various industries.
                         </p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="https://linkedin.com/in/janithhansidu" class="read-more" target="_blank">
+                            Read More →
+                        </a>
                     </div>
                 </article>
 
                 <article class="blog-item fade-in">
-                    <div class="blog-image">Deep Learning</div>
+                    <div class="blog-image">
+                        Deep Learning
+                        <div class="linkedin-badge">LinkedIn</div>
+                    </div>
                     <div class="blog-content">
                         <div class="blog-date">Jan 10, 2025</div>
                         <h3 class="blog-title">Building Efficient Multi-Agent Systems</h3>
                         <p class="blog-excerpt">
                             A comprehensive guide to designing and implementing scalable multi-agent architectures for complex applications.
                         </p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="https://linkedin.com/in/janithhansidu" class="read-more" target="_blank">
+                            Read More →
+                        </a>
                     </div>
                 </article>
 
                 <article class="blog-item fade-in">
-                    <div class="blog-image">LLM Fine-tuning</div>
+                    <div class="blog-image">
+                        LLM Fine-tuning
+                        <div class="linkedin-badge">LinkedIn</div>
+                    </div>
                     <div class="blog-content">
                         <div class="blog-date">Jan 05, 2025</div>
                         <h3 class="blog-title">Fine-tuning LLMs with LoRA Technique</h3>
                         <p class="blog-excerpt">
                             Learn how to efficiently fine-tune large language models using Low-Rank Adaptation for specific tasks.
                         </p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </article>
-
-                <article class="blog-item fade-in">
-                    <div class="blog-image">RAG Systems</div>
-                    <div class="blog-content">
-                        <div class="blog-date">Dec 28, 2024</div>
-                        <h3 class="blog-title">Building Production-Ready RAG Systems</h3>
-                        <p class="blog-excerpt">
-                            Best practices for developing robust Retrieval Augmented Generation systems for enterprise applications.
-                        </p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="https://linkedin.com/in/janithhansidu" class="read-more" target="_blank">
+                            Read More →
+                        </a>
                     </div>
                 </article>
             </div>
@@ -1016,7 +1254,7 @@
                     <div class="contact-icon">📱</div>
                     <div class="contact-info">
                         <h4>Phone</h4>
-                        <a href="tel:+94712782388">+1 (818) 2489 XX</a>
+                        <a href="tel:+94712782388">+94 712 782 388</a>
                     </div>
                 </div>
 
@@ -1187,7 +1425,7 @@
         });
 
         // Card hover effects
-        document.querySelectorAll('.skill-card, .portfolio-item, .blog-item').forEach(card => {
+        document.querySelectorAll('.skill-card, .portfolio-item, .blog-item, .certification-card, .award-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.boxShadow = '0 20px 40px rgba(244, 162, 97, 0.1)';
             });
@@ -1225,6 +1463,8 @@
         const portfolioItems = document.querySelectorAll('.portfolio-item');
         const skillCards = document.querySelectorAll('.skill-card');
         const blogItems = document.querySelectorAll('.blog-item');
+        const certificationCards = document.querySelectorAll('.certification-card');
+        const awardCards = document.querySelectorAll('.award-card');
 
         // Observer for staggered animations
         const staggerObserver = new IntersectionObserver((entries) => {
@@ -1236,12 +1476,16 @@
                         staggerAnimation(skillCards, 200);
                     } else if (entry.target.classList.contains('blog-grid')) {
                         staggerAnimation(blogItems, 150);
+                    } else if (entry.target.classList.contains('certifications-grid')) {
+                        staggerAnimation(certificationCards, 150);
+                    } else if (entry.target.classList.contains('awards-grid')) {
+                        staggerAnimation(awardCards, 150);
                     }
                 }
             });
         }, { threshold: 0.2 });
 
-        document.querySelectorAll('.portfolio-grid, .skills-grid, .blog-grid').forEach(grid => {
+        document.querySelectorAll('.portfolio-grid, .skills-grid, .blog-grid, .certifications-grid, .awards-grid').forEach(grid => {
             staggerObserver.observe(grid);
         });
     </script>
