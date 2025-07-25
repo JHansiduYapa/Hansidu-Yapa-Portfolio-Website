@@ -213,20 +213,23 @@
         /* Hero Image */
         .hero-image {
             position: relative;
-            height: 500px;
+            height: 800px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .profile-container {
+        /* .profile-container {
             position: relative;
-            width: 350px;
-            height: 450px;
+            width: 400px;
+            height: 400px;
             background: var(--card-bg);
             overflow: hidden;
             border: 1px solid var(--border-color);
-        }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
 
         .profile-placeholder {
             width: 100%;
@@ -902,7 +905,7 @@
 
                 <div class="hero-image slide-in-right">
                     <div class="profile-container">
-                        <div class="profile-placeholder">JH</div>
+                        <img src="src/profile-pic (5).png" alt="Profile Image" style="width: 500px; height: 500px; border-radius: 50%; background: #fff; object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 3px solid #fff;" />
                     </div>
                 </div>
             </div>
@@ -1190,7 +1193,7 @@
                 <!-- New Projects Added -->
                 <div class="portfolio-item fade-in" data-category="Deep Learning">
                     <div class="portfolio-image">
-                        <img src="src/cnn-lstm.png" alt="CNN-LSTM" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
+                        <img src="src/cnn_lstm.png" alt="CNN-LSTM" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
                     </div>
                     <div class="portfolio-content">
                         <h4>CNN-LSTM Image Caption Generator</h4>
@@ -1206,7 +1209,7 @@
 
                 <div class="portfolio-item fade-in" data-category="IoT">
                     <div class="portfolio-image">
-                        <img src="src/iot-irrigation.png" alt="IoT Smart Irrigation" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
+                        <img src="src/iot.png" alt="IoT Smart Irrigation" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
                     </div>
                     <div class="portfolio-content">
                         <h4>IoT Smart Irrigation And Monitoring System</h4>
@@ -1222,7 +1225,7 @@
 
                 <div class="portfolio-item fade-in" data-category="Deep Learning">
                     <div class="portfolio-image">
-                        <img src="src/gru-model.png" alt="GRU Model" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
+                        <img src="src/gru.png" alt="GRU Model" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
                     </div>
                     <div class="portfolio-content">
                         <h4>GRU Model from Scratch</h4>
@@ -1234,30 +1237,13 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="portfolio-item fade-in" data-category="Deep Learning">
-                    <div class="portfolio-image">
-                        <img src="src/transformer-model.png" alt="Transformer Model" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Transformer Model from Scratch</h4>
-                        <p>Build a Transformer model from scratch using Pytorch, implementing key concepts like attention, multi-head attention, and positional encoding.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Transformer</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Attention</span>
-                            <a href="https://github.com/janithhansidu/Transformer-Model-from-Scratch" class="tech-tag" target="_blank">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="portfolio-item fade-in" data-category="Web Development">
                     <div class="portfolio-image">
-                        <img src="src/university-admin.png" alt="University Admin Automation" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
+                        <img src="src/software.png" alt="University Admin Automation" style="width:100%;height:100%;object-fit:cover;border-radius:0px;">
                     </div>
                     <div class="portfolio-content">
                         <h4>University Administrative Automation System for Management Assistant</h4>
-                        <p>Led the development of Automate Management Assistant, a web app automating key admin tasks at the University of Jaffna. Managed Agile sprints with Jira, coordinated the team, and contributed to backend development.</p>
+                        <p> Developed of Automate Masement Assistant, a web app automating key admin tasks. Coordinated the team, and contributed to backend development.</p>
                         <div class="portfolio-tech">
                             <span class="tech-tag">Spring Boot</span>
                             <span class="tech-tag">React</span>
@@ -1266,7 +1252,6 @@
                             <span class="tech-tag">GitHub</span>
                             <a href="https://github.com/janithhansidu/University-Administrative-Automation-System-for-Management-Assistant" class="tech-tag" target="_blank">GitHub Repo</a>
                         </div>
-                        <div style="font-size:13px;color:var(--text-muted);margin-top:8px;">Mar 2025</div>
                     </div>
                 </div>
             </div>
